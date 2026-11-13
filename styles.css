@@ -68,3 +68,12 @@ details.subdetail[open]{padding-bottom:8px}.disclosure-list{border:1px solid var
 .traffic-chart{margin:0 0 12px;padding:12px 14px;background:#fffefa;border:1px solid var(--line);border-radius:9px}.traffic-chart figcaption{display:block;font-weight:700;padding:0 0 8px;border:0}.traffic-chart ul{list-style:none;margin:8px 0 0;padding:0}.traffic-chart li{display:flex;justify-content:space-between;gap:10px;padding:3px 0}.traffic-chart li strong{white-space:nowrap}
 .traffic-bar,.profit-bar{display:flex;gap:0;height:12px;border-radius:6px;overflow:hidden}.traffic-bar i:first-child,.profit-bar i:first-child{background:#176054}.traffic-bar i:first-child{flex:300}.traffic-bar i:nth-child(2){flex:96;background:#678b75}.traffic-bar i:nth-child(3){flex:36;background:#e8b968}
 .profit-mix{margin:10px 0 14px}.profit-bar i{flex:0 0 0}.profit-bar i:nth-child(2){background:#d6a155}.profit-mix dl{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 15px;margin:5px 0 0}.profit-mix dl>div{display:flex;align-items:baseline;gap:5px;font-size:.83rem}.profit-mix dt:before,.traffic-chart li span:before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px;background:#176054}.profit-mix dl>div+div dt:before{background:#d6a155}.traffic-chart li:nth-child(2) span:before{background:#678b75}.traffic-chart li:nth-child(3) span:before{background:#e8b968}.profit-mix dd{margin:0;font-weight:700}
+
+.event-traffic{margin:20px 0 10px;padding:14px;border:1px solid var(--line);border-radius:9px;background:#fffefa}
+.event-traffic h3{margin:0 0 10px}
+.event-traffic ol{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:5px;margin:0;padding:0;list-style:none}
+.event-traffic li{padding:6px 3px;text-align:center;border-radius:5px;background:#e7ece4;color:var(--green);font-size:.86rem;font-weight:700}
+.event-traffic dl{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:12px 0 0}
+.event-traffic dt{font-weight:800}
+.event-traffic dd{margin:2px 0 0;color:var(--muted);font-size:.89rem}
+@media(max-width:650px){.event-traffic dl{grid-template-columns:1fr;gap:7px}.event-traffic dl>div+div{border-top:1px solid var(--line);padding-top:7px}}
