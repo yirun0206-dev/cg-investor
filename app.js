@@ -78,13 +78,18 @@ for (const meals of [432, 576, 720]) {
   group.append(title);
   const table = document.createElement("table");
   table.className = "comparison-table";
+  table.setAttribute("role", "table");
   table.setAttribute("aria-label", title.textContent);
   const rates = [1, 3, 5];
   const results = rates.map((rate) => calculate(meals, rate));
-  const header = table.createTHead().insertRow();
+  const head = table.createTHead();
+  head.setAttribute("role", "rowgroup");
+  const header = head.insertRow();
+  header.setAttribute("role", "row");
   for (const label of ["轉換率", ...rates.map((rate) => rate + "%")]) {
     const cell = document.createElement("th");
     cell.scope = "col";
+    cell.setAttribute("role", "columnheader");
     cell.textContent = label;
     header.append(cell);
   }
@@ -101,13 +106,28 @@ for (const meals of [432, 576, 720]) {
     ["三年累計每股", (r) => share(r.threeYear)],
   ];
   const body = table.createTBody();
+  body.setAttribute("role", "rowgroup");
   for (const [label, render] of rows) {
     const row = body.insertRow();
+    row.setAttribute("role", "row");
     const term = document.createElement("th");
     term.scope = "row";
+    term.setAttribute("role", "rowheader");
     term.textContent = label;
     row.append(term);
-    for (const result of results) row.insertCell().textContent = render(result);
+    for (const result of results) {
+      const cell = row.insertCell();
+      cell.setAttribute("role", "cell");
+      const value = render(result);
+      const [number, unit] = value.split(" ");
+      cell.append(number);
+      if (unit) {
+        const suffix = document.createElement("span");
+        suffix.className = "comparison-unit";
+        suffix.textContent = " " + unit;
+        cell.append(suffix);
+      }
+    }
   }
   group.append(table);
   compare.append(group);

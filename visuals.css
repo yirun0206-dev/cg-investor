@@ -82,6 +82,13 @@
   color: #e2eadf;
 }
 #numbers { background: #f8f2e8; }
+#numbers details > summary { font-size: 1.125rem; }
+.scenario-group { margin-top: 1.25rem; }
+.scenario-group h3 { font-size: 1.25rem; margin-bottom: .5rem; }
+.comparison-table { font-size: 1.0625rem; line-height: 1.45; }
+.comparison-table th, .comparison-table td { padding: .55rem .45rem; }
+.comparison-table tbody tr:nth-last-child(2) { background: #dbe8dc; color: #16342d; font-weight: 800; }
+#numbers .profit-mix dl > div, #years p { font-size: 1rem; }
 .calculator { box-shadow: 0 12px 30px #563a2210; }
 .results .highlight { background: #16342d; }
 .results .highlight dd:first-of-type { font-size: clamp(1.65rem, 5vw, 3.15rem); }
@@ -156,4 +163,19 @@
   .story-grid, .story-grid .scene-match { grid-template-columns: 1fr; }
   .story-grid .scene-match img { height: auto; }
   .event-scene img, .invest-scene img { aspect-ratio: 16 / 8; }
+  #compare > p { font-size: 1.0625rem; }
+  #years { grid-template-columns: 1fr; }
+  .comparison-table :is(thead, tbody) { display: block; }
+  .comparison-table tr { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .comparison-table th:first-child {
+    grid-column: 1 / -1;
+    width: auto;
+    padding: .45rem .3rem 0;
+    border-bottom: 0;
+    font-weight: 800;
+  }
+  .comparison-table th, .comparison-table td { text-align: center; padding: .38rem .15rem; }
+  .comparison-table tbody tr { border-bottom: 1px solid var(--line); }
+  .comparison-table tbody td { border-bottom: 0; }
+  .comparison-unit { display: block; font-size: .9375rem; }
 }
