@@ -112,14 +112,17 @@ for (const meals of [432, 576, 720]) {
   group.append(table);
   compare.append(group);
 }
-const linkedDetails = document.querySelectorAll("#street-match, #compare");
+const linkedDetails = [
+  ["#street-match", document.querySelector("#street-match-fees")],
+  ["#compare", document.querySelector("#compare")],
+];
 function openLinkedDetails() {
-  for (const details of linkedDetails) {
-    if (location.hash === "#" + details.id) details.open = true;
+  for (const [hash, details] of linkedDetails) {
+    if (location.hash === hash) details.open = true;
   }
 }
-for (const details of linkedDetails) {
-  document.querySelectorAll('a[href="#' + details.id + '"]').forEach((link) => {
+for (const [hash, details] of linkedDetails) {
+  document.querySelectorAll(`a[href="${hash}"]`).forEach((link) => {
     link.addEventListener("click", () => { details.open = true; });
   });
 }
