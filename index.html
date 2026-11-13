@@ -8,54 +8,47 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="CG 娛樂網咖｜投資企劃">
 <meta property="og:description" content="看店內場景、每日客流目標和每股試算。">
-<meta property="og:image" content="https://yirun0206-dev.github.io/cg-investor/assets/entry.webp">
+<meta property="og:image" content="https://yirun0206-dev.github.io/cg-investor/assets/dining-scene.webp">
 <title>CG 娛樂網咖｜投資企劃</title>
 <link rel="stylesheet" href="styles.css?v=9">
+<link rel="stylesheet" href="visuals.css?v=10">
 <script src="app.js?v=8" defer></script>
 </head>
 <body>
 <header class="bar"><div class="wrap nav"><a class="brand" href="#top"><b>CG</b> 娛樂網咖</a><nav aria-label="企劃章節"><a href="#space">空間</a><a href="#menu">菜單</a><a href="#customers">客流</a><a href="#numbers">財務</a><a href="#invest">投資</a></nav></div></header>
 <main id="top">
 <section class="hero" aria-labelledby="hero-title">
-<img src="assets/entry.webp" alt="由二樓入口望向櫃台、電競與公共座位的裝修示意">
-<div class="wrap hero-copy"><p class="eyebrow">桃園 · CG 娛樂網咖投資企劃</p><h1 id="hero-title">來 CG 吃牛排、追劇，<br>也能揪隊打比賽。</h1><p>一個人來吃碗牛肉麵，或約朋友同區吃飯、打遊戲。</p><div class="hero-actions"><a class="button" href="#numbers">看每股試算 <span aria-hidden="true">↓</span></a><a class="button secondary" href="#space">逛逛店內空間</a></div></div>
+<img src="assets/entry.webp" fetchpriority="high" alt="由二樓入口望向櫃台、電競與公共座位的裝修示意">
+<div class="wrap hero-copy"><p class="eyebrow">桃園 · CG 娛樂網咖投資企劃</p><h1 id="hero-title">來 CG 吃牛排，<br>再揪隊開打。</h1><p>約朋友吃正餐、打電競。一個人來，也能坐下來追劇。</p><div class="hero-actions"><a class="button" href="#numbers">看每股試算 <span aria-hidden="true">↓</span></a><a class="button secondary" href="#space">逛逛店內空間</a></div></div>
 <span class="photo-label">AI 生成示意圖，非現場實拍</span>
 </section>
 <div class="wrap facts"><div><strong>1,500 萬元</strong><span>首輪募資目標</span></div><div><strong>1 萬元</strong><span>每股出資</span></div><div><strong>10 萬元</strong><span>首輪每人認購上限</span></div></div>
 
-<aside class="wrap quick-contents" aria-label="完整版企劃索引">
-<h2>直接看企劃明細</h2>
-<div class="quick-links">
-<a href="#space"><strong>3 個到店理由</strong><span>招牌餐點、舒適座位、街頭電競</span></a>
-<a href="#menu"><strong>完整菜單與價目</strong><span>排餐、開台、儲值與餐券</span></a>
-<a href="#why-visit"><strong>玩家為何願意到店</strong><span>第一次消費與付費回訪</span></a>
-<a href="#compare"><strong>9 種收益情境</strong><span>餐飲、平台及每股回收</span></a>
-</div>
-</aside>
-
 <section class="wrap section" id="space">
-<p class="eyebrow">空間與體驗</p><h2>一個人放鬆，<br class="mobile-break">一群人也好約</h2>
+<p class="eyebrow">店內體驗</p><h2>今天想怎麼玩？</h2>
 <p class="lede">一起吃飯，各自選想玩的。規劃 24 小時營業。</p>
 <div class="story-grid">
-  <article>
-    <img src="assets/friends.webp" loading="lazy" alt="朋友一起用餐的企劃情境">
+  <article class="scene-meal">
+    <img src="assets/dining-scene.webp" loading="lazy" alt="朋友在用機座位享用排餐的企劃情境">
     <p class="fine">AI 生成示意圖，非現場實拍</p>
     <h3>想吃正餐，就來 CG</h3>
     <p>自家招牌規劃沙朗牛排配麵和煎蛋，也有牛肉麵、雞排、豬排。</p>
     <a href="#menu">看規劃菜單</a>
   </article>
-  <article>
+  <article class="scene-seat">
     <img src="assets/solo.webp" loading="lazy" alt="單人包廂用餐與用機的企劃情境">
     <p class="fine">AI 生成示意圖，非現場實拍</p>
-    <h3>32 吋大螢幕、訂製沙發座椅</h3>
-    <p>舒服追劇、玩熟悉的休閒遊戲，電競設備以支援《英雄聯盟》和《絕地求生》為目標。</p>
+    <h3>坐得舒服，想玩想看都可以</h3>
+    <p>32 吋大螢幕搭配訂製沙發座椅。電競設備以支援《英雄聯盟》和《絕地求生》為目標。</p>
   </article>
-  <article>
-    <img src="assets/match.webp" loading="lazy" alt="兩隊在店內參加電競比賽的企劃情境">
-    <p class="fine">AI 生成示意圖，非現場實拍</p>
-    <h3>五人一隊，到店打 5 對 5</h3>
-    <p>CG 規劃受理報名、媒合對手、安排賽程，兩隊到店交手，隊友並肩開打。</p>
-    <a href="#street-match">看比賽流程與費用</a>
+  <article class="scene-match">
+    <img src="assets/tournament-scene.webp" loading="lazy" alt="兩隊在店內參加電競比賽的企劃情境">
+    <div class="scene-match-copy">
+      <p class="fine">AI 生成示意圖，非現場實拍</p>
+      <h3>五人一隊，到店打 5 對 5</h3>
+      <p>CG 規劃受理報名、媒合對手、安排賽程，兩隊到店交手，隊友並肩開打。</p>
+      <a href="#street-match">看比賽流程與費用</a>
+    </div>
   </article>
 </div>
 <div class="pair">
@@ -101,6 +94,10 @@
 <p>尖峰平均多坐 15 分鐘，同樣 50 席下，全日約剩 372 人次。按客單 180 元、餐點成本 90 元及每月成本 85.64 萬元，餐飲月稅前約從 31 萬元降到 14.80 萬元。</p>
 </details>
 <div class="event-traffic">
+  <figure class="event-scene">
+    <img src="assets/esports.webp" loading="lazy" alt="規劃中的雙隊比賽席與轉播牆">
+    <figcaption>AI 生成示意圖，非現場實拍</figcaption>
+  </figure>
   <h3>街頭電競怎麼帶人到店？</h3>
   <ol aria-label="街頭電競報名流程">
     <li>五人報名</li><li>媒合對手</li><li>排定場次</li><li>到店開打</li>
@@ -132,7 +129,7 @@
 </ul></details>
 </div></section>
 
-<section id="numbers" class="wrap section">
+<section id="numbers" class="section"><div class="wrap">
 <p class="eyebrow">財務試算</p><h2>一股 1 萬元，首年試算多少？</h2>
 <p class="lede">選用餐人次和平台情境，金額按 1,500 股折算。</p>
 <div class="calculator">
@@ -169,10 +166,11 @@
 <div id="scenario-comparison" class="scenario-grid"></div></details>
 <details><summary>成本與平台假設</summary><p>餐飲以每月 30 天、客單 180 元、每餐直接成本 90 元估算。每月共用成本 85.64 萬元，含租金 15 萬元、7 人底薪 42.30 萬元、其他營運 10.84 萬元、折舊 17.50 萬元。加班、替班與雇主負擔待核對。</p><p>每月來店人次含回訪，以情境比例估首次入金人數，開店後按合作方對帳逐人確認。每月活躍入金客等於本月新增加上上月活躍客的 80%。人均月入金 2,000 元，合作利潤按入金的 20% 試算，實際依合作結算，可能虧損。駐點幣商提供即時換幣服務，收益未納入試算。</p></details>
 <details><summary>未用券開台營收</summary><p>每日 144 人次、每月 30 天，假設全數未用券且每人開台 2 小時。台費月營收 34.56 萬元，餐飲低消月營收 21.60 萬元，合計 56.16 萬元。此情境未扣成本，獨立列於分紅試算之外。</p><p>活動成本示例。若發出 300 張 100 元餐券、核銷率 60%，折抵合計 1.80 萬元。</p></details>
-</section>
+</div></section>
 
 <section id="invest" class="closing"><div class="wrap section">
 <p class="eyebrow">投資與股東權益</p><h2>出資上限、用途和權益一次看</h2>
+<figure class="invest-scene"><img src="assets/overview.webp" loading="lazy" alt="CG 二樓各區的俯視裝修示意"><figcaption>AI 生成示意圖，非現場實拍</figcaption></figure>
 <div class="split"><div><h3>1,500 萬元用在哪裡</h3><dl class="budget"><div><dt>主機、螢幕與桌椅</dt><dd>549.75 萬元</dd></div><div><dt>裝潢與開辦</dt><dd>500 萬元</dd></div><div><dt>首月餐飲週轉</dt><dd>10 萬元</dd></div><div><dt>待分配週轉與結算準備</dt><dd>440.25 萬元</dd></div></dl><p class="fine">空調、電力、網路、廚房、周邊設備、押金與開辦費包含在 500 萬元內。61 席的新增設備與隔間差額依複量及工程報價確認。</p></div><div><h3>每人最多 10 股</h3><p>首輪每股 1 萬元，每人出資最多 10 萬元，希望大家量力參與。出資可能虧損。</p><h3>加盟推廣權由股東專享</h3><p>品牌正式開放加盟後，原始股東與貢獻股東均可推廣。推薦並促成加盟的股東，可取得該案加盟金的 50%。</p></div></div>
 <h3 class="next-step">有興趣參與？</h3><p>聯絡分享網站的項目團隊，約時間看場地、核對報價與招募條件。季度可分配盈餘按有效持股比例全數分配。</p>
 </div></section>
