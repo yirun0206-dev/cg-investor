@@ -60,7 +60,7 @@
   border-color: #18322f;
   padding-bottom: 0;
 }
-.scene-match img { height: 100%; }
+.story-grid .scene-match img { height: 100%; aspect-ratio: auto; object-fit: contain; background: #111c1a; }
 .story-grid .scene-match-copy { align-self: center; margin: 0; padding: clamp(16px, 3.5vw, 40px); }
 .scene-match .fine { color: #d9e1d8; }
 .scene-match a { color: #f5cd91; }
@@ -96,6 +96,6 @@
   .facts { padding-inline: 7px; }
   .facts > div { min-width: 0; }
   .story-grid, .story-grid .scene-match { grid-template-columns: 1fr; }
-  .scene-match img { height: auto; }
+  .story-grid .scene-match img { height: auto; }
   .event-scene img, .invest-scene img { aspect-ratio: 16 / 8; }
 }
