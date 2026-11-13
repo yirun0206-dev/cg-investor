@@ -45,6 +45,10 @@ function update() {
   document.getElementById("years").replaceChildren(...yearItems);
   show("volume", percent ? `每月來店 ${integer.format(visits)} 人次 · 約 ${integer.format(newCustomers)} 位首次入金` : `每月來店 ${integer.format(visits)} 人次 · 僅計餐飲`);
   show("food-revenue", `${format.format(meals * 30 * 180 * 12 / 10000)} 萬元`);
+  show("food-share", format.format(foodProfit / 1500) + " 元");
+  show("platform-share", format.format(platformFirstYear / 1500) + " 元");
+  document.querySelector("#food-bar").style.flexGrow = foodProfit;
+  document.querySelector("#platform-bar").style.flexGrow = platformFirstYear;
   show("food", `${format.format(foodProfit / 10000)} 萬元`);
   show("platform", `${format.format(platformFirstYear / 10000)} 萬元`);
   show("total", `${format.format(combined / 10000)} 萬元`);
