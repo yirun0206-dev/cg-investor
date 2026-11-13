@@ -154,6 +154,12 @@
 
 @media (max-width: 650px) {
   .nav nav { border-color: #444438; }
+  main .wrap:not(.hero-copy) {
+    width: auto;
+    margin-left: max(10px, env(safe-area-inset-left));
+    margin-right: max(10px, env(safe-area-inset-right));
+  }
+  .disclosure-list > p { margin-inline: 11px; }
   #street-match { scroll-margin-top: 106px; }
   .hero { min-height: 0; }
   .hero > img { height: clamp(176px, 51vw, 320px); }
