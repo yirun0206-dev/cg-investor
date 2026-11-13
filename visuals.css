@@ -83,6 +83,62 @@
 #numbers { background: #f8f2e8; }
 .calculator { box-shadow: 0 12px 30px #563a2210; }
 .results .highlight { background: #16342d; }
+.results .highlight dd:first-of-type { font-size: clamp(1.65rem, 5vw, 3.15rem); }
+.results .highlight .return-amount {
+  color: #ffdfa5;
+  font-size: clamp(.74rem, 2vw, .98rem);
+  font-weight: 650;
+}
+.quarterly-payout {
+  margin: 16px 0;
+  padding: clamp(10px, 2vw, 18px);
+  border: 1px solid #d8e4d7;
+  border-radius: 8px;
+  background: #f2f5ef;
+}
+.quarterly-payout h3 { margin: 0; color: var(--green); font-size: clamp(1.05rem, 3vw, 1.32rem); }
+.quarterly-payout .fine { margin: .35rem 0 0; }
+.quarterly-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 7px; margin: 9px 0; }
+.quarterly-grid > div { background: #fffefa; border-radius: 6px; padding: .45rem .65rem; }
+.quarterly-grid dt { color: var(--green); font-size: .81rem; }
+.quarterly-grid dd { margin: 0; font-weight: 800; font-size: clamp(.86rem, 2vw, 1.06rem); }
+.visit-scenes {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin: 15px 0 8px;
+  padding: 0;
+}
+.visit-scenes li { min-width: 0; overflow: hidden; border-radius: 8px; background: #e7ece4; }
+.visit-scenes img { height: 118px; object-fit: cover; }
+.visit-caption { padding: 10px 12px; }
+.visit-caption h4 { margin: 0; color: var(--dark); font-size: .99rem; line-height: 1.35; }
+.visit-caption p { margin: 4px 0 0; font-size: .83rem; line-height: 1.5; }
+.visit-flow {
+  min-height: 118px;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 2px;
+  padding: 6px;
+  background: #16342d;
+  color: #f6e4be;
+  font-size: .8rem;
+  font-weight: 750;
+}
+.visit-flow span { background: #ffffff13; border-radius: 5px; padding: 3px 8px; text-align: center; }
+.visit-flow b { line-height: 1; }
+.visit-footnote { margin: 8px 0 0; }
+@media (max-width: 650px) {
+  .quarterly-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .visit-scenes { grid-template-columns: 1fr; gap: 7px; }
+  .visit-scenes li { display: grid; grid-template-columns: minmax(88px, 34%) minmax(0, 1fr); }
+  .visit-scenes img { height: 100%; min-height: 88px; }
+  .visit-caption { align-self: center; padding: 8px; }
+  .visit-flow { min-height: 88px; font-size: .67rem; }
+  .visit-flow span { padding-inline: 3px; }
+}
 #invest { background: #20231e; }
 .invest-scene { margin-top: 16px; }
 .invest-scene img { aspect-ratio: 3 / 1; object-position: center 52%; }

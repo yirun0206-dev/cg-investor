@@ -4,6 +4,9 @@ const integer = new Intl.NumberFormat("zh-TW");
 function show(id, value) {
   document.getElementById(id).textContent = value;
 }
+function returnRate(perShare) {
+  return format.format(perShare / 100) + "%";
+}
 function calculate(meals, percent) {
   const visits = (meals + 144) * 30;
   const newCustomers = Math.round(visits * percent / 100);
@@ -32,14 +35,19 @@ function update() {
   const percent = Number(scenario.elements.rate.value);
   const { visits, newCustomers, foodProfit, platformFirstYear, combined, quarters, years, perShare, threeYear } = calculate(meals, percent);
   const quarterItems = quarters.map((profit, index) => {
-    const item = document.createElement("p");
-    item.textContent = `第 ${index + 1} 季　${format.format(profit / 1500)} 元／股`;
+    const item = document.createElement("div");
+    const label = document.createElement("dt");
+    const amount = document.createElement("dd");
+    label.textContent = `第 ${index + 1} 季`;
+    amount.textContent = `${format.format(profit / 1500)} 元／股`;
+    item.append(label, amount);
     return item;
   });
   document.getElementById("quarters").replaceChildren(...quarterItems);
   const yearItems = years.map((profit, index) => {
     const item = document.createElement("p");
-    item.textContent = `第 ${index + 1} 年　${format.format(profit / 1500)} 元／股`;
+    const perShareForYear = profit / 1500;
+    item.textContent = `第 ${index + 1} 年　${returnRate(perShareForYear)} · ${format.format(perShareForYear)} 元／股`;
     return item;
   });
   document.getElementById("years").replaceChildren(...yearItems);
@@ -53,9 +61,9 @@ function update() {
   show("platform", `${format.format(platformFirstYear / 10000)} 萬元`);
   show("total", `${format.format(combined / 10000)} 萬元`);
   show("per-share", `${format.format(perShare)} 元`);
-  show("first-rate", `相當於出資額的 ${format.format(perShare / 100)}%`);
+  show("first-rate", returnRate(perShare));
   show("three-year", `${format.format(threeYear)} 元`);
-  show("three-rate", `相當於出資額的 ${format.format(threeYear / 100)}%`);
+  show("three-rate", returnRate(threeYear));
 }
 scenario.addEventListener("change", update);
 update();
@@ -89,7 +97,7 @@ for (const meals of [432, 576, 720]) {
     ["平台利潤", (r) => amount(r.platformFirstYear)],
     ["合計稅前", (r) => amount(r.combined)],
     ["首年每股", (r) => share(r.perShare)],
-    ["首年回收率", (r) => format.format(r.perShare / 100) + "%"],
+    ["首年投報率", (r) => returnRate(r.perShare)],
     ["三年累計每股", (r) => share(r.threeYear)],
   ];
   const body = table.createTBody();

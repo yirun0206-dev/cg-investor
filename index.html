@@ -11,8 +11,8 @@
 <meta property="og:image" content="https://yirun0206-dev.github.io/cg-investor/assets/dining-scene.webp">
 <title>CG 娛樂網咖｜投資企劃</title>
 <link rel="stylesheet" href="styles.css?v=9">
-<link rel="stylesheet" href="visuals.css?v=12">
-<script src="app.js?v=8" defer></script>
+<link rel="stylesheet" href="visuals.css?v=13">
+<script src="app.js?v=13" defer></script>
 </head>
 <body>
 <header class="bar"><div class="wrap nav"><a class="brand" href="#top"><b>CG</b> 娛樂網咖</a><nav aria-label="企劃章節"><a href="#space">空間</a><a href="#menu">菜單</a><a href="#customers">客流</a><a href="#numbers">財務</a><a href="#invest">投資</a></nav></div></header>
@@ -124,12 +124,24 @@
 <details id="street-match"><summary>5 對 5 賽事流程與費用</summary><p>隊伍報名後由 CG 媒合對手與賽程，兩隊到店開台比賽，勝隊領獎。以 10 人各報名 1,000 元為例，CG 收 1,000 元媒合費及當場台費，勝隊取得 9,000 元扣除台費後的餘額。賽前賽後可用餐，賽事收入獨立列於現行分紅試算之外。</p></details>
 <section class="visit-case" id="why-visit" aria-labelledby="why-visit-title">
 <h3 id="why-visit-title">在家就能玩，為什麼還要來 CG？</h3>
-<ol class="visit-steps">
-<li><strong>第一次來</strong><span>指定遊戲玩家到店消費、驗證本人帳號，可獲贈排餐。</span></li>
-<li><strong>揪朋友一起來</strong><span>同一區吃飯，有人打遊戲、有人追劇。</span></li>
-<li><strong>看誰願意再付費</strong><span>試營運記錄實付金額、尖峰出餐和 30 天付費回訪。</span></li>
+<ol class="visit-scenes" aria-label="從第一次到店到付費回訪">
+  <li>
+    <img src="assets/steak.webp" loading="lazy" alt="牛排、麵和煎蛋的排餐示意">
+    <div class="visit-caption"><h4>第一次來，試試排餐</h4><p>規劃讓指定遊戲玩家到店消費、驗證本人帳號後獲贈排餐。</p></div>
+  </li>
+  <li>
+    <img src="assets/friends.webp" loading="lazy" alt="朋友一起在電腦座位用餐的情境示意">
+    <div class="visit-caption"><h4>揪朋友，一起吃飯</h4><p>坐在同一區，想打遊戲、追劇或聊天都可以。</p></div>
+  </li>
+  <li>
+    <div class="visit-flow">
+      <span>LINE／FB 通知</span><b aria-hidden="true">↓</b><span>30 天內付費回訪</span>
+    </div>
+    <div class="visit-caption"><h4>有多少人願意再來？</h4><p>試營運記錄付費回訪、實付金額和尖峰出餐量。</p></div>
+  </li>
 </ol>
-<details><summary>引流方式與客流驗證</summary><p>周邊彩券行憑證可搭配餐券活動，官方 LINE 與 FB 用來通知回訪活動。贈餐成本另列，付費餐數與付費開台時數分開追蹤。每日 432 人次與平台轉換率是待驗證的試算假設。</p></details>
+<p class="fine visit-footnote">照片為情境示意。每日 432 用餐人次與平台轉換率為試算假設。</p>
+<details><summary>看活動與記錄方式</summary><p>周邊彩券行憑證可搭配餐券活動。贈餐成本另列，付費餐數與付費開台時數分開記錄。</p></details>
 </section>
 <details class="source-note"><summary>市場背景與資料來源</summary><p>七款指定遊戲的 Google Play 下載級距，用於了解目標客群的遊戲類型與公開規模。桃園門市需求以實際付費來客及回訪驗證。</p><ul class="games">
 <li><a href="https://play.google.com/store/apps/details?id=com.igs.mjstar31">明星三缺一</a><small>鈊象電子（IGS）</small><b>500 萬+</b></li>
@@ -143,8 +155,8 @@
 </div></section>
 
 <section id="numbers" class="section"><div class="wrap">
-<p class="eyebrow">財務試算</p><h2>一股 1 萬元，首年試算多少？</h2>
-<p class="lede">選用餐人次和平台情境，金額按 1,500 股折算。</p>
+<p class="eyebrow">財務試算</p><h2>投資 1 萬元，首年投報率多少？</h2>
+<p class="lede">選用餐人次和平台情境，查看每股投報率和各季試算。</p>
 <div class="calculator">
 <form class="controls" id="scenario">
 <fieldset><legend>每日付費用餐</legend><div class="choices meals">
@@ -161,8 +173,21 @@
 </form>
 <div aria-live="polite"><p class="assumption" id="volume">每月來店 17,280 人次 · 僅計餐飲</p>
 <dl class="results">
-<div class="highlight"><dt>首年稅前每股</dt><dd id="per-share">2,480.00 元</dd><small id="first-rate">相當於出資額的 24.80%</small></div>
-<div class="highlight"><dt>三年累計稅前每股</dt><dd id="three-year">7,440.00 元</dd><small id="three-rate">相當於出資額的 74.40%</small></div>
+<div class="highlight"><dt>首年投報率（稅前）</dt><dd id="first-rate">24.80%</dd><dd class="return-amount">每股 <span id="per-share">2,480.00 元</span></dd></div>
+<div class="highlight"><dt>三年累計投報率（稅前）</dt><dd id="three-rate">74.40%</dd><dd class="return-amount">每股 <span id="three-year">7,440.00 元</span></dd></div>
+</dl>
+<section class="quarterly-payout" aria-labelledby="quarterly-title">
+  <h3 id="quarterly-title">每季結算分潤一次</h3>
+  <p class="fine">首年各季稅前利潤，按 1,500 股折算。</p>
+  <dl id="quarters" class="quarterly-grid">
+    <div><dt>第 1 季</dt><dd>620.00 元／股</dd></div>
+    <div><dt>第 2 季</dt><dd>620.00 元／股</dd></div>
+    <div><dt>第 3 季</dt><dd>620.00 元／股</dd></div>
+    <div><dt>第 4 季</dt><dd>620.00 元／股</dd></div>
+  </dl>
+  <p class="fine">實領按各季可分配盈餘結算，先扣稅費、補足累虧並保留必要資金。</p>
+</section>
+<dl class="results">
 <div><dt>餐飲首年營業額</dt><dd id="food-revenue">2,799.36 萬元</dd></div>
 <div><dt>餐飲首年稅前利潤</dt><dd id="food">372.00 萬元</dd></div>
 <div><dt>平台首年合作利潤試算</dt><dd id="platform">0.00 萬元</dd></div>
@@ -172,7 +197,7 @@
   <div class="profit-bar" aria-hidden="true"><i id="food-bar"></i><i id="platform-bar"></i></div>
   <dl><div><dt>餐飲每股</dt><dd id="food-share">2,480.00 元</dd></div><div><dt>平台每股</dt><dd id="platform-share">0.00 元</dd></div></dl>
 </div></div>
-<details><summary>每股明細 · 各季與逐年</summary><h3 class="detail-label">首年各季</h3><div class="quarters" id="quarters"></div><h3 class="detail-label">三年逐年</h3><div class="quarters" id="years"></div><p class="fine">按公司合計稅前利潤折算每股。</p></details><p class="fine">實領依各季可分配盈餘結算，需先扣稅費、補足累虧並保留必要資金。</p>
+<details><summary>看第 1 至第 3 年投報率</summary><div class="quarters" id="years"></div><p class="fine">各年投報率＝當年稅前每股利潤 ÷ 每股出資 1 萬元。</p></details>
 </div>
 <details id="compare"><summary>比較 9 種客流與收益情境</summary>
 <p>三種每日用餐人次各比較 1%、3%、5%。各欄列出首次入金、餐飲與平台利潤、公司合計及每股試算。來店人次包含回訪，每位首次入金客戶依合作方對帳只計一次。</p>
