@@ -51,9 +51,9 @@
   background: #222a24;
 }
 .super-cover-scenes img { height: auto; border-radius: 0; aspect-ratio: 16 / 9; }
-.super-cover-scenes .cover-stars img { object-position: 40% center; }
+.super-cover-scenes .cover-platform img { object-position: 40% center; }
 .super-cover-scenes .cover-esports img { object-fit: contain; background: #231b16; }
-.super-cover-scenes .cover-allbet img { object-position: 75% center; }
+.super-cover-scenes .cover-baccarat img { object-position: 75% center; }
 .super-cover-scenes span {
   display: block;
   padding: 6px 9px;
