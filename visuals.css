@@ -75,7 +75,12 @@
 }
 .facts { background: #efe4d3; border-bottom: 0; padding-inline: 16px; }
 .facts strong { color: #51351e; font-variant-numeric: tabular-nums; }
-#space { padding-top: clamp(40px, 7vw, 85px); }
+#space { margin-block: clamp(20px, 4vw, 38px); scroll-margin-top: 110px; }
+#space > h3 { margin-bottom: .4rem; }
+#space > .pair figure img { height: auto; aspect-ratio: auto; }
+.event-scene img.arena-furniture-photo { height: auto; aspect-ratio: auto; }
+#why-visit, #menu { scroll-margin-top: 110px; }
+#menu .disclosure-list summary { font-size: 1.05rem; }
 .visit-preview { padding-block: clamp(32px, 5vw, 64px); }
 .visit-preview-grid {
   display: grid;
@@ -140,7 +145,6 @@
 .story-grid .scene-match-copy { align-self: center; margin: 0; padding: clamp(16px, 3.5vw, 40px); }
 .scene-match .fine { color: #d9e1d8; }
 .scene-match a { color: #f5cd91; }
-#space > .pair figure img, .event-scene img.arena-furniture-photo { height: auto; aspect-ratio: auto; }
 .menu-feature { background: #ede0ca; padding: clamp(12px, 3vw, 24px); border-radius: 12px; margin-bottom: 10px; }
 #customers { background: #e1e9df; }
 .traffic-kpis > div+div { background: #14564b; }
