@@ -140,7 +140,7 @@
 .story-grid .scene-match-copy { align-self: center; margin: 0; padding: clamp(16px, 3.5vw, 40px); }
 .scene-match .fine { color: #d9e1d8; }
 .scene-match a { color: #f5cd91; }
-#space > .pair figure img { aspect-ratio: 16 / 8; }
+#space > .pair figure img, .event-scene img.arena-furniture-photo { height: auto; aspect-ratio: auto; }
 .menu-feature { background: #ede0ca; padding: clamp(12px, 3vw, 24px); border-radius: 12px; margin-bottom: 10px; }
 #customers { background: #e1e9df; }
 .traffic-kpis > div+div { background: #14564b; }
