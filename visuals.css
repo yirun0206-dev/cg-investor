@@ -327,3 +327,13 @@
 @media (max-width: 760px) {
   .location-value { grid-template-columns: 1fr; }
 }
+
+.location-distance-table { margin-block: 12px; }
+.location-distance-table th,
+.location-distance-table td {
+  padding: clamp(6px, 1.6vw, 12px);
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+.location-distance-table th:last-child,
+.location-distance-table td:last-child { white-space: nowrap; }
